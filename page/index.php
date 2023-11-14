@@ -47,7 +47,7 @@ include "../fungsi/kodeauto.php";
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"> <span>M.Kal BBMKG Wil II</span></a>
+            <a href="index.php" class="site_title"> <span>M.Kal BBMKG Wil II</span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -79,9 +79,10 @@ include "../fungsi/kodeauto.php";
                 </li>
                 <li><a><i class="fa fa-edit"></i> Location Calibration <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="?page=stamet.index">Stasiun Meteorologi</a></li>
+                    <li><a href="?page=stamet.index">Meteorology Stations</a></li>
                     <li><a href="?page=aws.index">AWS</a></li>
                     <li><a href="?page=aaws.index">AAWS</a></li>
+                    <li><a href="?page=awos.index">AWOS</a></li>
                     <li><a href="?page=arg.index">ARG</a></li>
                     <li><a href="?page=inatews.index">Inatews</a></li>
                   </ul>
@@ -123,7 +124,7 @@ include "../fungsi/kodeauto.php";
               </ul>
             </div>
             <div class="menu_section">
-              <h3>Admin Only</h3>
+              <!--<h3>Admin Only</h3>
               <ul class="nav side-menu">
                 <li><a><i class="fa fa-bar-chart-o"></i> Location Calibration <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
@@ -134,7 +135,7 @@ include "../fungsi/kodeauto.php";
                     <li><a href="?page=inatews.index">Inatews</a></li>
                   </ul>
                 </li>
-                <!-- <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
+                 <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="e_commerce.html">E-commerce</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -188,7 +189,7 @@ include "../fungsi/kodeauto.php";
             <a data-toggle="tooltip" data-placement="top" title="Lock">
               <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.php">
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="page/login.php">
               <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>
           </div>
@@ -212,7 +213,7 @@ include "../fungsi/kodeauto.php";
                   <!-- <a class="dropdown-item"  href="javascript:;"> Profile</a> -->
                   <a class="dropdown-item" href="javascript:;">Settings</a>
                   <!-- <a class="dropdown-item"  href="javascript:;">Help</a> -->
-                  <a class="dropdown-item" href="login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  <a class="dropdown-item" href="?page=logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                 </div>
               </li>
             </ul>
@@ -227,20 +228,20 @@ include "../fungsi/kodeauto.php";
         <?php
         /*$page = $_GET['page'];
             if (file_exists("konten/$page.php")) { 
-                include "konten/$page.php";
+                include "page/$page.php";
             }
             else { // jika tidak ditemukan default ke beranda
-                include "konten/beranda.php";
+                include "page/index.php";
             }*/
-        $get = @$_GET['page'];
-        $page = str_replace(".", "/", $get);; //replace .(titik) dengan /
-
-        if (file_exists("../page/$page.php")) {
-          include "../page/$page.php";
-        } else { // jika tidak ditemukan default ke beranda
-          include "../page/home/index.php";
-        }
-        ?>
+            $get = @$_GET['page'];
+            $page = str_replace(".", "/", $get);; //replace .(titik) dengan /
+    
+            if (file_exists("../page/$page.php")) {
+              include "../page/$page.php";
+            } else { // jika tidak ditemukan default ke beranda
+              include "../page/home/index.php";
+            }
+            ?>
       </div>
 
       <!-- /page content -->
@@ -262,7 +263,7 @@ include "../fungsi/kodeauto.php";
   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!-- FastClick -->
   <script src="../vendors/fastclick/lib/fastclick.js"></script>
-  <!-- NProgress -->
+  <!-- NProgres-->
   <script src="../vendors/nprogress/nprogress.js"></script>
   <!-- Chart.js -->
   <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
