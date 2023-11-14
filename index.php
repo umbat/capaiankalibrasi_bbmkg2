@@ -82,6 +82,7 @@ include "fungsi/kodeauto.php";
                     <li><a href="e_commerce.html">Meteorology Stations</a></li>
                     <li><a href="?page=aws.index">AWS</a></li>
                     <li><a href="?page=aaws.index">AAWS</a></li>
+                    <li><a href="?page=awos.index">AWOS</a></li>
                     <li><a href="?page=arg.index">ARG</a></li>
                     <li><a href="?page=inatews.index">Inatews</a></li>
                   </ul>
@@ -128,8 +129,9 @@ include "fungsi/kodeauto.php";
                 <li><a><i class="fa fa-bar-chart-o"></i> Location Calibration <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="e_commerce.html">Meteorology Stations</a></li>
-                    <li><a href="projects.html">AWS</a></li>
+                    <li><a href="?page=aws.index">AWS</a></li>
                     <li><a href="?page=aaws.index">AAWS</a></li>
+                    <li><a href="?page=awos.index">AWOS</a></li>
                     <li><a href="?page=arg.index">ARG</a></li>
                     <li><a href="?page=inatews.index">Inatews</a></li>
                   </ul>
@@ -178,7 +180,7 @@ include "fungsi/kodeauto.php";
           <!-- /sidebar menu -->
 
           <!-- /menu footer buttons -->
-          <div class="sidebar-footer hidden-small">
+          <!-- <div class="sidebar-footer hidden-small">
             <a data-toggle="tooltip" data-placement="top" title="Settings">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             </a>
@@ -191,7 +193,7 @@ include "fungsi/kodeauto.php";
             <a data-toggle="tooltip" data-placement="top" title="Logout" href="page/login.php">
               <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>
-          </div>
+          </div> -->
           <!-- /menu footer buttons -->
         </div>
       </div>
